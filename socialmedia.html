@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+       
+        
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family:  sans-serif;  
+        }
+       
+        body{
+            background-color: rgb(169, 234, 235);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;            
+        }
+
+        ul{
+            position: relative;
+            display: flex;
+            gap: 5px;
+        }
+
+        ul li{
+            position: relative;
+            list-style: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+            cursor: pointer;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0.1);
+            transition: 0.5s;            
+        }
+
+        ul li:hover{
+            width: 180px;
+            box-shadow:0 10px 25px rgba(0, 0, 0, 0) ;
+        }
+
+        ul li::before{
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50px;
+            background: linear-gradient(45deg, var(--1), var(--j));
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        ul li:hover::before{
+            opacity: 1;
+        }
+
+        ul li:after{
+            content: '';
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            height: 100%;
+            border-radius: 60px;
+            background: linear-gradient(45deg, var(--1), var(--j));
+            opacity: 0;
+            transition: 0.5s;
+            z-index: -1;
+            filter: blur(15px);            
+        }
+
+        ul li:hover::after{
+            opacity: 0.5;            
+        }
+
+        ul li i{
+            color: #777;
+            font-size: 1.7rem ;
+            transition: 0.5s;
+            transition-delay: 0.5s;
+        }
+
+        ul li span{
+            position: absolute;
+        }
+
+        ul li .titulo{
+            color: whitesmoke;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            transform: scale(0);
+            transition-delay: 0.5s;
+        }
+
+        ul li:hover .titulo{           
+            transform:scale(1) ;
+            transition-delay: 0.25s;            
+        }
+
+    </style>
+    <title>socialmedia</title>
+</head>
+<body>
+   
+    <ul class="socialmedia">
+        <li style="--1:#1b51e7; --j:#4952cc;">
+            <span class="icon"><i class="fa fa-facebook"></i></span>         
+            <span class="titulo">facebook</span>
+        </li>
+        <li style="--1:#051c24;--j:#012f2d;">
+            <span class="icon"><i class="fa fa-twitter"></i></span>           
+            <span class="titulo">Twitter</span>
+        </li>
+        <li style="--1:#5ed71d;--j:#559322;">
+            <span class="icon"><i class="fa fa-whatsapp"></i></i></span>           
+            <span class="titulo">Whatsapp</li>
+        <li style="--1:#d4ed1a;--j:#ff9151;">
+            <span class="icon"><i class="fa fa-linkedin"></i></i></span>           
+            <span class="titulo">linkedin</span>
+        </li>
+        <li style="--1:#f2565e;--j:#ff518e;">
+            <span class="icon"><i class="fa fa-instagram"></i></i></span>           
+            <span class="titulo"> instagram</span>
+        </li>
+    </ul>
+
+
+    
+</body>
+</html>
